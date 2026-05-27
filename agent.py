@@ -133,6 +133,8 @@ session_service = InMemorySessionService()
 image_runner = Runner(
     app=image_app,  # Pass the app instead of the agent
     session_service=session_service,
+     plugins=[
+        LoggingPlugin()]
 )
 
 def check_for_approval(events):
