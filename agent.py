@@ -43,21 +43,6 @@ mcp_image_server = McpToolset(
     )
 )
 
-# Create image agent with MCP integration
-'''
-image_agent = LlmAgent(
-    model=Gemini(model="gemini-2.5-flash-lite", retry_options=retry_config),
-    name="image_agent",
-    instruction="Use the MCP Tool to generate images for user queries",
-    tools=[mcp_image_server],
-)
-
-
-
-runner = InMemoryRunner(agent=image_agent)
-
-response = runner.run_debug("Provide a sample tiny image", verbose=True)
-'''
 
 LARGE_REQUEST_THRESHOLD = 1
 
